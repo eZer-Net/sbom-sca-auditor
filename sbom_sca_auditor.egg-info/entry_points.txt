@@ -1,0 +1,2 @@
+[console_scripts]
+sbom-sca-auditor = sbom_builder.cli:main

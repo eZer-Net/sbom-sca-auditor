@@ -1,0 +1,11 @@
+.git
+.scan-sca_osa
+__pycache__
+*.pyc
+.pytest_cache
+.venv
+venv
+node_modules
+dist
+build
+__MACOSX

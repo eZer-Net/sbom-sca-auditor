@@ -1,0 +1,13 @@
+#!/bin/sh
+set -eu
+SOURCE="$0"
+while [ -L "$SOURCE" ]; do
+  DIR="$(CDPATH= cd -P -- "$(dirname -- "$SOURCE")" && pwd)"
+  TARGET="$(readlink "$SOURCE")"
+  case "$TARGET" in
+    /*) SOURCE="$TARGET" ;;
+    *) SOURCE="$DIR/$TARGET" ;;
+  esac
+done
+HERE="$(CDPATH= cd -P -- "$(dirname -- "$SOURCE")" && pwd)"
+exec python3 "$HERE/sbom_auditor.py" "$@"

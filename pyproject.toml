@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sbom-sca-auditor"
+version = "1.1.0"
+description = "Recursive CycloneDX SBOM generation and Trivy SCA auditing for source repositories"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [{name = "SBOM SCA Auditor contributors"}]
+dependencies = []
+
+[project.scripts]
+sbom-sca-auditor = "sbom_builder.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["sbom_builder*"]
