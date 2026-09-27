@@ -1,4 +1,5 @@
 # SBOM SCA Auditor
+<img width="1764" height="710" alt="image" src="https://github.com/user-attachments/assets/63393e0f-0a70-4ef8-820d-83c388792fa8" />
 
 SBOM SCA Auditor is a small CLI that recursively analyzes a source repository, builds a CycloneDX SBOM, scans confirmed dependencies with Trivy, and shows how vulnerable libraries enter the project.
 
